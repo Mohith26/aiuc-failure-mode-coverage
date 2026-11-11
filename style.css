@@ -88,7 +88,7 @@ kbd { font-family: var(--font-mono); font-size: 11px; border: 1px solid var(--bo
 .tabs { display: flex; gap: 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); padding: 0 32px; font-size: 12.5px; }
 .tabs a { text-decoration: none; color: var(--color-secondary-text); padding: 11px 8px 10px; margin-right: 18px; position: relative; display: flex; align-items: center; gap: 7px; }
 .tabs a[aria-selected="true"] { color: var(--color-black); }
-.tabs a[aria-selected="true"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--color-green); }
+.tabs a[aria-selected="true"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: #b8cc84; }
 .tabs a:hover { color: var(--color-black); }
 .newtag { font-size: 9.5px; text-transform: uppercase; letter-spacing: .06em; background: var(--color-muted-yellow); color: #6b5520; padding: 1px 5px; border-radius: 2px; }
 

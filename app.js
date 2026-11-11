@@ -502,7 +502,7 @@ function helpOverlay() {
 }
 let lastKey = "";
 document.addEventListener("keydown", (ev) => {
-  if (ev.target.matches("input, textarea") && ev.key !== "Escape") return;
+  if (ev.target.matches?.("input, textarea") && ev.key !== "Escape") return;
   if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
   const r = route();
   if (ev.key === "Escape") { if ($(".help")) $(".help").remove(); else if (!$("#modal").hidden) closeModal(); else closeDrawer(); return; }
