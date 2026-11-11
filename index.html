@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIUC-1 Audit Report · Failure-Mode Coverage</title>
+<meta name="description" content="Unofficial concept demo: Good-Turing failure-mode coverage and a discovery-optimal eval planner inside an AIUC-1 audit report.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,400;125,500&family=DM+Mono:wght@400;500&family=Inter+Tight:wght@400;500&family=Instrument+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a1a1a'/%3E%3Ctext x='16' y='22' font-family='serif' font-size='15' fill='white' text-anchor='middle'%3EA1%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topbar" role="banner">
+  <div class="topbar-inner">
+    <a class="wordmark" href="#/coverage" aria-label="AIUC-1 home">AIUC<span class="wm-dash">-</span>1</a>
+    <nav class="topnav" aria-label="Primary">
+      <a href="#/results" data-nav="results">Reports</a>
+      <a href="#/coverage" data-nav="coverage" class="active">Evals</a>
+      <a href="https://standard.aiuc-1.com/evals-taxonomy/risks" target="_blank" rel="noopener">Taxonomy</a>
+    </nav>
+    <div class="topcells">
+      <a class="topcell" href="https://standard.aiuc-1.com/quarterly-evals" target="_blank" rel="noopener">Standard Docs</a>
+      <button class="topcell client" id="clientBtn" aria-haspopup="true" aria-label="Client">Northwind Credit <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main class="frame" id="main">
+  <div class="gridbg" aria-hidden="true"></div>
+  <section class="report" aria-label="AIUC-1 audit report">
+    <div class="report-inner">
+      <div class="report-head">
+        <div>
+          <h1 class="breit">AIUC-1 Audit Report</h1>
+          <div class="mono caps sub">Prepared for Northwind Credit · Servicing Agent (text)</div>
+        </div>
+        <div class="head-right">
+          <div class="txt-right">
+            <div class="breit status" id="headStatus">Round 1 complete</div>
+            <div class="mono caps sub" id="headSub">Nov 6, 2026 / 2,400 evals</div>
+          </div>
+          <div class="seal" aria-hidden="true"><svg viewBox="0 0 64 64"><defs><radialGradient id="sg" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#f2f2f2"/><stop offset=".55" stop-color="#b9b9b9"/><stop offset="1" stop-color="#8a8a8a"/></radialGradient></defs><circle cx="32" cy="32" r="30" fill="url(#sg)" stroke="#9a9a9a"/><circle cx="32" cy="32" r="22" fill="none" stroke="#6f6f6f" stroke-width="1.4"/><path d="M32 12 L22 46 M32 12 L42 46 M24 38 H40" fill="none" stroke="#5c5c5c" stroke-width="1.6"/><path d="M14 34 Q32 22 50 34" fill="none" stroke="#6f6f6f" stroke-width="1.2"/></svg></div>
+        </div>
+      </div>
+      <nav class="tabs mono" role="tablist" aria-label="Report sections">
+        <a role="tab" href="#/results" data-tab="results">Results</a>
+        <a role="tab" href="#/evals" data-tab="evals">Evals Run</a>
+        <a role="tab" href="#/coverage" data-tab="coverage">Coverage <span class="newtag">New</span></a>
+        <a role="tab" href="#/documents" data-tab="documents">Audit Documents</a>
+      </nav>
+      <div id="view" class="view" aria-live="polite">
+        <div class="loading" id="loading"><div class="spinner" aria-hidden="true"></div><span class="mono">Loading Round 1 evals…</span></div>
+      </div>
+    </div>
+  </section>
+  <footer class="foot mono">Unofficial concept demo by Mohith Gajjela. Not affiliated with AIUC. Synthetic data on the public AIUC-1 risk and attack taxonomy. <a href="https://github.com/Mohith26/aiuc-failure-mode-coverage" target="_blank" rel="noopener">Source</a> · Press <kbd>?</kbd> for shortcuts</footer>
+</main>
+
+<aside class="drawer" id="drawer" aria-hidden="true" aria-label="Cell detail" tabindex="-1"></aside>
+<div class="scrim" id="scrim" hidden></div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Eval transcript" hidden></div>
+<div class="toast mono" id="toast" role="status" hidden></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

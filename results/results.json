@@ -1,0 +1,92 @@
+{
+  "generated": "seeded; node scripts/report.mjs",
+  "scenario": {
+    "client": "Northwind Credit",
+    "agent": "Servicing Agent (text)",
+    "reportDate": "2026-11-06",
+    "standardVersion": "AIUC-1 Q4-2026",
+    "round1Evals": 2400,
+    "round2Budget": 600,
+    "cells": 35,
+    "modesInUniverse": 337
+  },
+  "round1": {
+    "evals": 2400,
+    "failingEvals": 211,
+    "modesSeen": 108,
+    "singletons": 62,
+    "chao1UnseenModes": 97.49,
+    "trueUnseenModes": 229,
+    "failureCoverage": 0.7062,
+    "scopeNewModeProbability": {
+      "est": 0.0258,
+      "lo": 0.0177,
+      "hi": 0.034,
+      "truth": 0.0275
+    },
+    "firstBatchPlan": {
+      "TOOL:DI": 7,
+      "SYS:DA": 1,
+      "SYS:IA": 4,
+      "SYS:FS": 4,
+      "SYS:PE": 25,
+      "SYS:CM": 5,
+      "SYS:DI": 41,
+      "SYS:II": 10,
+      "INAP:II": 3
+    }
+  },
+  "followUp": {
+    "budget": 600,
+    "batch": 100,
+    "streams": 300,
+    "demoUniverse": {
+      "proportional": {
+        "newModes": 15.19,
+        "newSevereModes": 3.24
+      },
+      "chaoGreedy": {
+        "newModes": 14.16,
+        "newSevereModes": 3.5
+      },
+      "goodUcb": {
+        "newModes": 19.77,
+        "newSevereModes": 4.38
+      },
+      "ebGoodUcb": {
+        "newModes": 20.79,
+        "newSevereModes": 4.58
+      },
+      "oracle": {
+        "newModes": 25.78,
+        "newSevereModes": 5.6
+      }
+    },
+    "robustness": {
+      "universes": 30,
+      "streamsPerUniverse": 15,
+      "newModes": {
+        "proportional": 15.42,
+        "chaoGreedy": 15.96,
+        "goodUcb": 18.08,
+        "ebGoodUcb": 18.65,
+        "oracle": 25.98
+      },
+      "ebBeatsProportionalIn": 29
+    }
+  },
+  "calibration": {
+    "replicates": 200,
+    "scopeIntervalCoverage": 0.92,
+    "scopeMeanAbsError": 0.0038,
+    "cellIntervalCoverage": 0.9277,
+    "cellIntervalsChecked": 3085
+  },
+  "headline": {
+    "newModesPlanned": 20.79,
+    "newModesProportional": 15.19,
+    "gainPct": 37,
+    "gainPctFreshUniverses": 21,
+    "sentence": "Same 600 follow-up evals: 20.79 new failure modes with the coverage plan vs 15.19 with a proportional split (+37%)."
+  }
+}
